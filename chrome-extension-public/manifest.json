@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "github-upload-image-as-inline",
+  "version": "0.0.1",
+  "description": "upload image as inline base64 img tag on Github comment",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "host_permissions": ["https://github.com/"],
+  "permissions": ["activeTab", "scripting"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  }
+}
